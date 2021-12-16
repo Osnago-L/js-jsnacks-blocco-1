@@ -1,6 +1,7 @@
 // SNACK 1
 
 function snack1(){
+    document.getElementById("snack3").innerHTML ="";
     let snack1Array=[];
     let somma = 0;
     do{
@@ -9,10 +10,11 @@ function snack1(){
         snack1Array.push(number);
     }while (somma < 50)
 
-    console.log(somma);
+    document.getElementById("snack3").innerHTML = somma;
 };
 
 function snack2(){
+    document.getElementById("snack3").innerHTML ="";
     let number = parseInt(prompt("ïnserisci un numero..."))
     let stringRandom = [];
     let arrayMatrix = [];
@@ -23,12 +25,14 @@ function snack2(){
         }
         stringRandom.push(arrayMatrix)
         arrayMatrix = [];
+        document.getElementById("snack3").innerHTML += `<div>${stringRandom[index]}</div>`
     }
 
-    console.log(stringRandom);
+    
 };
 
 function snack3(){
+    document.getElementById("snack3").innerHTML ="";
     let daddyDiv = document.getElementById("snack3");
     let divRed = document.createElement("div");
     let divGreen = document.createElement("div");
